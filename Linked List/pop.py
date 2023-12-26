@@ -33,22 +33,30 @@ class LinkedList:
 
 
     def pop(self):
-        # when length = 0
+        
+        
         if self.length == 0:
             return None
-        temps = self.head
-        pre = self.head 
-        # while length is 2 or more
-        while temps.next is not None :
-            pre = temps
-            temps = temps.next        
+        
+        pre = self.head
+        temp = self.head
+
+        # for _ in range(self.length - 1)
+        while temp.next is not None:
+            pre = temp
+            temp = temp.next 
+        
         self.tail = pre
         self.tail.next = None
-        self.length -=1
-        # when the length is just 1
+        self.length -= 1
+              
+        
         if self.length == 0:
             self.head = None
-            self.head = None
+            self.tail = None
+            self.length = 0
+            
+        return temp   
         
     
         return temps

@@ -47,7 +47,7 @@ class LinkedList:
 
         temp = self.head
         self.head = self.tail
-        self.tail = self.head
+        self.tail = temp
         before = None
         after = temp.next
 
